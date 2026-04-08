@@ -5,6 +5,12 @@ export interface Project {
   problem: string;
   imageUrl: string;
   figmaUrl: string;
+  caseStudy?: {
+    role: string;
+    tools: string[];
+    fullDescription: string;
+    externalLinks: { name: string; url: string }[];
+  };
 }
 
 export interface Experience {

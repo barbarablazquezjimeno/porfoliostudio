@@ -1,130 +1,191 @@
 import { motion } from "motion/react";
-import { Experience } from "../types";
-import { Linkedin, Github, Mail, Globe, Dribbble, Instagram } from "lucide-react";
+import { Clock, Download } from "lucide-react";
 
-const experiences: Experience[] = [
+const experiences = [
   {
-    id: "1",
-    company: "TechFlow",
-    role: "Senior Product Designer",
-    period: "2022 - Present",
-    achievements: [
-      "Lideré el rediseño de la plataforma principal, aumentando la retención de usuarios en un 25%.",
-      "Implementé un sistema de diseño escalable que redujo el tiempo de desarrollo en un 30%.",
-      "Mentoricé a 3 diseñadores junior, ayudándoles a mejorar sus habilidades de UX y UI."
+    id: "softtek",
+    company: "Softtek",
+    period: "3 años 2 meses",
+    details: "Jornada completa · Madrid, Comunidad de Madrid, España · En remoto",
+    subRoles: [
+      {
+        title: "Real Madrid - Product designer",
+        period: "mar. 2024 - actualidad · 2 años 2 meses",
+        skills: ["Auditorías WCAG 2.1", "Diseño Inclusivo", "Design Systems", "Design Tokens", "IA Tools"],
+        achievements: [
+          "Análisis y auditorías exhaustivas de accesibilidad (WCAG 2.1) tanto en plataformas web como en aplicaciones móviles nativas.",
+          "Creación y mantenimiento del Design System para mobile, implementando Design Tokens y variables para asegurar la escalabilidad y consistencia visual.",
+          "Liderazgo en fases de Concept, Research y Diseño, utilizando metodologías de diseño centrado en el usuario para validar nuevas funcionalidades.",
+          "Facilitación de sesiones de Brainstorming y co-creación con stakeholders para idear soluciones innovadoras a problemas complejos.",
+          "Aplicación de herramientas IA: Perplexity, Google AI studio, Stitch, Copilot, Cursor, Figma Make."
+        ]
+      },
+      {
+        title: "Inditex - Product designer",
+        period: "mar. 2023 - mar. 2024 · 1 año 1 mes",
+        skills: ["UX/UI Design", "Mobile & Wearables", "User Research", "Entrevistas Reales"],
+        achievements: [
+          "Diseño de interfaces UX/UI para plataformas internas y de cara al cliente, asegurando una experiencia de usuario fluida y coherente.",
+          "Ejecución de procesos de investigación con usuarios (User Research) para identificar necesidades y puntos de dolor.",
+          "Planificación y realización de entrevistas reales con usuarios finales para obtener insights cualitativos directos.",
+          "Diseño y optimización de experiencias específicas para dispositivos mobile y wearables, adaptando la interacción a contextos de uso dinámicos."
+        ]
+      }
     ]
   },
   {
-    id: "2",
-    company: "CreativePulse",
-    role: "UX Designer",
-    period: "2020 - 2022",
+    id: "rovi",
+    company: "ROVI Pharmaceutical Company",
+    role: "UX/UI Product designer",
+    period: "may. 2021 - mar. 2023 · 1 año 11 meses",
+    details: "Jornada completa · Madrid, Comunidad de Madrid, España",
+    skills: ["Prototipado", "Arquitectura de Información", "Usability Testing", "Análisis de KPIs"],
     achievements: [
-      "Diseñé flujos de usuario críticos para aplicaciones móviles con más de 1M de descargas.",
-      "Realicé más de 50 pruebas de usabilidad para validar conceptos de diseño antes de la implementación.",
-      "Colaboré estrechamente con ingenieros para asegurar la fidelidad del diseño final."
+      "As Is de procesos: Análisis la información cualitativa y cuantitativa disponible, Identificación las necesidades de los usuarios, Diagramación del As Is, Detección de ineficiencias, Identificación de pain-points.",
+      "Diseño del Digital Journey: Definición los requisitos funcionales a desarrollar, Conceptualización, flujos de navegación, arquitectura de la información, Maximización del valor aportado a los usuarios, Diseño UI de las distintas pantallas del viaje digital, Copywritting (formularios, notificaciones), Definición de la identidad visual de los procesos.",
+      "Seguimiento y acompañamiento del equipo de consultoría que realiza la programación sobre la plataforma.",
+      "Reportar sobre avances y gestionar las expectativas de los stakeholders.",
+      "Testeo en fase beta.",
+      "Mentorización y acompañamiento al usuario.",
+      "Mantenimiento del árbol de reporting actualizado. Creación de fichas de empleados y validación con el software HCM (Human Capital Management) corporativo.",
+      "Resolución de consultas de usuario.",
+      "Iteración y mejora continua. Mantener la consistencia de la experiencia del digital journey.",
+      "Elaboración de KPIs."
     ]
   },
   {
-    id: "3",
-    company: "StartUp Inc",
-    role: "Junior Designer",
-    period: "2018 - 2020",
+    id: "viaja",
+    company: "Viaja, Disfruta y Ayuda",
+    role: "UX/UI Designer",
+    period: "nov. 2020 - jun. 2021 · 8 meses",
+    details: "Jornada parcial · Madrid, Comunidad de Madrid, España",
+    skills: ["User Research", "Branding", "Card Sorting", "User Personas"],
     achievements: [
-      "Apoyé en la creación de interfaces para el MVP de la compañía.",
-      "Desarrollé activos visuales para campañas de marketing digital.",
-      "Aprendí y apliqué principios básicos de diseño centrado en el usuario."
+      "Diseño de contenido (UX) y de interface (Web).",
+      "User research, card sorting, user persona, user flow...",
+      "Conceptualización, prototipado, ideación y diseño de materiales para acciones en campañas publicitarias, redes sociales, contenido de páginas web y e-commerce (Wordpress, woocommerce).",
+      "Identidad corporativa, packaging, branding y acciones de marketing y comunicación.",
+      "Apoyo en la creación de infografías, iconografía.",
+      "Edición de fotografías y presentaciones."
+    ]
+  },
+  {
+    id: "buscoextra",
+    company: "BuscoExtra - ETT Hostelería Digital",
+    role: "Técnico Generalista RRHH (Startup)",
+    period: "ene. 2019 - mar. 2020 · 1 año 3 meses",
+    details: "Madrid y alrededores, España",
+    skills: ["Brainstorming", "User Interviews", "Testing"],
+    achievements: [
+      "UX Research: Participación en proyectos internos y apoyo a los diferentes departamentos: Brainstorming, entrevistas y testing para mejora del uso de la app."
     ]
   }
-];
-
-const socialLinks = [
-  { name: "LinkedIn", url: "#", icon: Linkedin },
-  { name: "Behance", url: "#", icon: Globe },
-  { name: "Dribbble", url: "#", icon: Dribbble },
-  { name: "Instagram", url: "#", icon: Instagram },
 ];
 
 export default function About() {
   return (
     <section id="about" className="bg-zinc-50 px-6 py-24 lg:px-20">
-      <div className="grid gap-16 lg:grid-cols-2">
-        {/* Experience Timeline */}
-        <div>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <h2 className="font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
-            Experiencia
+            Sobre mí
           </h2>
-          <p className="mt-4 text-lg text-zinc-600">
-            Mi trayectoria profesional construyendo productos digitales.
-          </p>
-          
-          <div className="mt-12 space-y-12 border-l border-zinc-200 pl-8">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="relative"
-              >
-                <div className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-zinc-900 bg-zinc-50" />
-                
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <h3 className="text-xl font-bold text-zinc-900">{exp.role}</h3>
-                  <span className="text-sm font-medium text-zinc-400 md:text-right">{exp.period}</span>
-                </div>
-                <p className="mt-1 text-lg font-medium text-zinc-600">{exp.company}</p>
-                
-                <ul className="mt-4 space-y-2">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-zinc-500">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300" />
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
+          <a 
+            href="/cv.pdf" 
+            download
+            className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-zinc-400 transition-colors hover:text-zinc-900"
+          >
+            Descargar CV
+            <Download className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
+          </a>
         </div>
 
-        {/* Contact & Socials */}
-        <div className="flex flex-col justify-between">
-          <div>
-            <h2 className="font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
-              Conectemos
-            </h2>
-            <p className="mt-4 text-lg text-zinc-600">
-              ¿Tienes un proyecto en mente o simplemente quieres saludar?
-            </p>
-            
-            <div className="mt-12">
-              <a
-                href="mailto:hola@tuemail.com"
-                className="group flex items-center gap-4 text-2xl font-medium text-zinc-900 transition-colors hover:text-zinc-600 md:text-4xl"
-              >
-                hola@tuemail.com
-                <Mail className="h-6 w-6 transition-transform group-hover:translate-x-1 md:h-10 md:w-10" />
-              </a>
-            </div>
-          </div>
-          
-          <div className="mt-16">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-zinc-400">Encuéntrame en</h3>
-            <div className="mt-6 flex flex-wrap gap-6">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  className="flex items-center gap-2 text-zinc-600 transition-colors hover:text-zinc-900"
-                >
-                  <link.icon className="h-5 w-5" />
-                  <span className="font-medium">{link.name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
+        <div className="space-y-16">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="group relative grid gap-8 border-b border-zinc-200 pb-16 lg:grid-cols-3"
+            >
+              <div className="lg:col-span-1">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-900 text-white">
+                    <span className="text-xs font-bold">{exp.company.substring(0, 2).toUpperCase()}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-zinc-900">{exp.company}</h3>
+                    <p className="text-sm font-medium text-zinc-400">{exp.period}</p>
+                  </div>
+                </div>
+                <div className="mt-6 space-y-2 text-sm text-zinc-500">
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-4 w-4" />
+                    {exp.details}
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-2">
+                {exp.subRoles ? (
+                  <div className="space-y-8">
+                    {exp.subRoles.map((sub, i) => (
+                      <div key={i} className="relative pl-6 border-l-2 border-zinc-200">
+                        <h4 className="text-xl font-bold text-zinc-900">{sub.title}</h4>
+                        <p className="text-sm font-medium text-zinc-400">{sub.period}</p>
+                        
+                        {sub.skills && (
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {sub.skills.map((skill, j) => (
+                              <span key={j} className="rounded-full bg-zinc-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500 border border-zinc-200">
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+
+                        {sub.achievements && (
+                          <ul className="mt-4 space-y-2">
+                            {sub.achievements.map((achievement, j) => (
+                              <li key={j} className="flex items-start gap-3 text-zinc-600">
+                                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300" />
+                                <span className="text-sm leading-relaxed">{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div>
+                    <h4 className="text-xl font-bold text-zinc-900">{exp.role}</h4>
+                    
+                    {exp.skills && (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {exp.skills.map((skill, j) => (
+                          <span key={j} className="rounded-full bg-zinc-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500 border border-zinc-200">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <ul className="mt-6 space-y-4">
+                      {exp.achievements?.map((achievement, i) => (
+                        <li key={i} className="flex items-start gap-3 text-zinc-600">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300" />
+                          <span className="text-sm leading-relaxed">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
